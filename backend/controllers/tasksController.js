@@ -1,13 +1,15 @@
 const tasksModel = require('../models/taskModels')
 
-const getAll = async (req, res) =>{
-
+const getAll = async (req, res) => {
     const tasks = await tasksModel.getAll();
-
     return res.status(200).json(tasks)
-
 };
 
-module.exports = { 
-    getAll
+const createProd = async(req, res) =>{
+    const produto = await tasksModel.createProd()
+    return res.status(201).json(produto)
+};
+module.exports = {
+    getAll,
+    createProd
 };
