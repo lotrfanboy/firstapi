@@ -3,6 +3,7 @@ const router = express.Router();
 const taskController = require('./controllers/tasksController')
 
 router.get('/tasks', taskController.getAll);
+router.post('/tasks', taskController.createProd)
 //router.get ('/',(res, resp) =>{res.status = (200).send('router iniciado')})
 
 

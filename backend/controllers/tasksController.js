@@ -6,7 +6,7 @@ const getAll = async (req, res) => {
 };
 
 const createProd = async(req, res) =>{
-    const produto = await tasksModel.createProd()
+    const produto = await tasksModel.createProd(req.body)
     return res.status(201).json(produto)
 };
 module.exports = {
